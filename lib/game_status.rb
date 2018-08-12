@@ -63,7 +63,7 @@ end
 # winner?
 
 def winner(board)
-  if draw?(board) || !over?(board) 
+  if draw?(board) || !over?(board)
     return nil
   end
   win_combination = won?(board)
