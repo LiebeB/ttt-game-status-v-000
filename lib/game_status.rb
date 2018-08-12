@@ -37,25 +37,33 @@ end
 # full?
 
 def full?(board)
-  board.all? {|cell| cell == "X" || cell == "O"}
+  if board.all? {|cell| cell == "X" || cell == "O"}
+    return true
+  end
 end
 
 # draw?
 
 def draw?(board)
-  full?(board) && !won?(board)
+  if full?(board) && !won?(board)
+    return true
+  end
+  return false
 end
 
 # over?
 
 def over?(board)
-  full?(board) || won?(board) || draw?(board)
+  if full?(board) || won?(board) || draw?(board)
+    return true
+  end
+  return false
 end
 
 # winner?
 
 def winner(board)
-  if draw?(board) || !over?(board)
+  if draw?(board) || !over?(board) 
     return nil
   end
   win_combination = won?(board)
