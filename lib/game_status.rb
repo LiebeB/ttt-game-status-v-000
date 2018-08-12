@@ -51,7 +51,7 @@ end
 # over?
 
 def over?(board)
-  full?(board) || won?(board) || draw?(board) 
+  full?(board) || won?(board) || draw?(board)
 end
 
 # winner?
