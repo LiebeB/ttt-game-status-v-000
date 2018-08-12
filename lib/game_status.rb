@@ -28,7 +28,10 @@ WIN_COMBINATIONS = [
 # won?
 
 def won?(board)
-  board.none?{|cell| cell == "X" || cell == "O"} ? false : WIN_COMBINATIONS.find{|win_combination| is_win_combination?(board, win_combination)}
+  if board.none?{|cell| cell == "X" || cell == "O"}
+    return false
+  end
+  WIN_COMBINATIONS.find{|win_combination| is_win_combination?(board, win_combination)}
 end
 
 # full?
