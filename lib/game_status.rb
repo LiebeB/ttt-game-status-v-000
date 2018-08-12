@@ -37,9 +37,7 @@ end
 # full?
 
 def full?(board)
-  if board.all? {|cell| cell == "X" || cell == "O"}
-    return true
-  end
+  board.all? {|cell| cell == "X" || cell == "O"}
 end
 
 # draw?
